@@ -83,6 +83,14 @@ export default {
             height: "0",
           },
         },
+        "glow-pulse": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px hsl(177 70% 55% / 0.5), 0 0 40px hsl(177 70% 55% / 0.3)",
+          },
+          "50%": {
+            boxShadow: "0 0 30px hsl(177 70% 55% / 0.7), 0 0 60px hsl(177 70% 55% / 0.4)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
