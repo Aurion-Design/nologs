@@ -11,7 +11,7 @@ const Index = () => {
         />
         
         <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          404, Logviewer not Found
+          Oops! LogViewer Access Required
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
@@ -30,7 +30,8 @@ const Index = () => {
           href="https://discord.gg/aurion"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-200 hover:opacity-90 hover:scale-105"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 animate-[glow-pulse_2s_ease-in-out_infinite]"
+          style={{ boxShadow: "var(--glow-primary)" }}
         >
           <svg 
             className="w-5 h-5" 
