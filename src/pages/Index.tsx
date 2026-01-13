@@ -10,7 +10,7 @@ const Index = () => {
           className="h-16 md:h-20 w-auto mb-10"
         />
         
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 whitespace-nowrap">
           Oops! LogViewer Access Required
         </h1>
         
@@ -30,8 +30,7 @@ const Index = () => {
           href="https://discord.gg/aurion"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 animate-[glow-pulse_2s_ease-in-out_infinite]"
-          style={{ boxShadow: "var(--glow-primary)" }}
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_hsl(177_70%_55%_/_0.7),0_0_60px_hsl(177_70%_55%_/_0.4)]"
         >
           <svg 
             className="w-5 h-5" 
