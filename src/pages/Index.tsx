@@ -1,6 +1,16 @@
+import { useLocation } from "react-router-dom";
 import aurionLogo from "@/assets/aurion-logo.png";
 
-const Index = () => {
+interface IndexProps {
+  showLogTip?: boolean;
+}
+
+const Index = ({ showLogTip }: IndexProps) => {
+  const location = useLocation();
+  
+  // Extract the log ID from the path (e.g., /logs/abc123 -> abc123)
+  const logId = showLogTip ? location.pathname.replace(/^\/logs\/?/, '') : null;
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-background px-6">
       <div className="flex flex-col items-center text-center max-w-lg">
@@ -21,6 +31,14 @@ const Index = () => {
         <p className="text-muted-foreground mb-8">
           Modmail Logs are sent in a logs channel as a <code className="bg-secondary px-2 py-1 rounded text-primary font-mono text-sm">.txt</code> file.
         </p>
+
+        {showLogTip && logId && (
+          <div className="bg-secondary/50 border border-border rounded-lg p-4 mb-8 w-full">
+            <p className="text-sm text-muted-foreground">
+              <span className="text-primary font-medium">💡 Tip:</span> Paste <code className="bg-background px-2 py-0.5 rounded text-primary font-mono text-sm">{logId}</code> in the logs channel to find the log file easier.
+            </p>
+          </div>
+        )}
         
         <p className="text-muted-foreground mb-6">
           Want to upgrade?

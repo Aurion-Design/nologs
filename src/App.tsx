@@ -16,6 +16,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/logs/*" element={<Index showLogTip />} />
           <Route path="*" element={<Index />} />
         </Routes>
       </BrowserRouter>
